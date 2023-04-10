@@ -25,11 +25,11 @@ PUBLISH FUNCTION set_draft(p_lifecycle_states SMALLINT) RETURNS SMALLINT;
 ALTER MODULE lifecycle
 PUBLISH FUNCTION set_live(p_lifecycle_states SMALLINT) RETURNS SMALLINT;
 
--- Return lifecycle states with the DELETED_PENDING bit index (bit 3) set. 
+-- Return lifecycle states with the DRAFT_SUBMITTED bit index (bit 3) set. 
 ALTER MODULE lifecycle
-PUBLISH FUNCTION set_deleted_pending(p_lifecycle_states SMALLINT) RETURNS SMALLINT;
+PUBLISH FUNCTION set_draft_submitted(p_lifecycle_states SMALLINT) RETURNS SMALLINT;
 
--- Return lifecycle states with the SUBMITTED bit index (bit 4) set. 
+-- Return lifecycle states with the DELETE_SUBMITTED bit index (bit 4) set. 
 ALTER MODULE lifecycle
-PUBLISH FUNCTION set_submitted(p_lifecycle_states SMALLINT) RETURNS SMALLINT;
+PUBLISH FUNCTION set_delete_submitted(p_lifecycle_states SMALLINT) RETURNS SMALLINT;
 
